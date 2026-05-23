@@ -6,7 +6,7 @@ tic = [ [" " for i in range(3)],
       ]
 while ans.upper() == "Y":
 
-    for i in range((9 // 2) + 1):
+    while " " in tic:
 
         print("Player 1: X")
         row1 = int(input("Type the number of row you would like to choose: "))
