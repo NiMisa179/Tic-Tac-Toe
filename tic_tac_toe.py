@@ -1,7 +1,7 @@
 print("Tic Tac Toe!")
 ans = input("S T A R T: Y/N?: ")
 
-# creates a 2-dimension list full of empty spaces. 3x3, like the tic tac toe board
+# creates a 2-dimension list full of empty spaces. 3x3, like the tic-tac-toe board
 tic = [[" " for i in range(3)],
        [" " for i in range(3)],
        [" " for i in range(3)]
@@ -9,6 +9,8 @@ tic = [[" " for i in range(3)],
 
 # Future Improvement: The game will ask the players if they will continue after the first round
 cont = True
+
+win1 = win2 = False
 
 while cont:
 
@@ -38,7 +40,6 @@ while cont:
         print("+---+---+---+")
 
     # checks every winning situation for player 1
-    win1 = False
     if (tic[0][col1 - 1] == tic[1][col1 - 1] == tic[2][col1 - 1] == "x") or (
             tic[row1 - 1][0] == tic[row1 - 1][1] == tic[row1 - 1][2] == "x") or (
             tic[0][0] == tic[1][1] == tic[2][2] == "x") or (tic[0][2] == tic[1][1] == tic[2][0] == "x"):
@@ -48,6 +49,17 @@ while cont:
     if win1:
         print("Player 1 wins")
         cont = False
+        break
+
+    # if an empty cell is spotted, it allows the program to continue.
+    # Else, it means that the board is full, and it 's a tie between players.
+    cont = False
+    for i in range(3):
+        for j in range(3):
+            if tic[i][j] == " ":
+                cont = True
+    if not cont:
+        print("It 's a tie!")
         break
 
     print("Player 2: O")
@@ -75,7 +87,6 @@ while cont:
         print("|")
         print("+---+---+---+")
 
-    win2 = False
     if (tic[0][col2 - 1] == tic[1][col2 - 1] == tic[2][col2 - 1] == "o") or (
         tic[row2 - 1][0] == tic[row2 - 1][1] == tic[row2 - 1][2] == "o") or (
         tic[0][0] == tic[1][1] == tic[2][2] == "o") or (tic[0][2] == tic[1][1] == tic[2][0] == "o"):
@@ -87,10 +98,15 @@ while cont:
         cont = False
         break
 
-# this checks the state where none of the players win
-    if not win1 and not win2:
-        print("its a tie!")
+    cont = False
+    for i in range(3):
+        for j in range(3):
+            if tic[i][j] == " ":
+                cont = True
+    if not cont:
+        print("It 's a tie!")
         break
+
 
 
 
