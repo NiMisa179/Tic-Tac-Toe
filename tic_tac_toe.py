@@ -26,12 +26,11 @@ while ans.upper() == "Y":
         tic[row1 - 1][col1 - 1] = "x"
 
         print("+---+---+---+")
-        print("| " + tic[0][0].upper() + " | " + tic[0][1].upper() + " | " + tic[0][2].upper() + " |")
-        print("+---+---+---+")
-        print("| " + tic[1][0].upper() + " | " + tic[1][1].upper() + " | " + tic[1][2].upper() + " |")
-        print("+---+---+---+")
-        print("| " + tic[2][0].upper() + " | " + tic[2][1].upper() + " | " + tic[2][2].upper() + " |")
-        print("+---+---+---+")
+        for i in range(3):
+            for j in range(3):
+                print("| " + tic[i][j].upper(), end=" ")
+            print("|")
+            print("+---+---+---+")
 
         print("Player 2: O")
         row2 = int(input("Type the number of row you would like to choose: "))
@@ -50,9 +49,8 @@ while ans.upper() == "Y":
         tic[row2 - 1][col2 - 1] = "o"
 
         print("+---+---+---+")
-        print("| " + tic[0][0].upper() + " | " + tic[0][1].upper() + " | " + tic[0][2].upper() + " |")
-        print("+---+---+---+")
-        print("| " + tic[1][0].upper() + " | " + tic[1][1].upper() + " | " + tic[1][2].upper() + " |")
-        print("+---+---+---+")
-        print("| " + tic[2][0].upper() + " | " + tic[2][1].upper() + " | " + tic[2][2].upper() + " |")
-        print("+---+---+---+")
+        for i in range(3):
+            for j in range(3):
+                print("| " + tic[i][j].upper(), end=" ")
+            print("|")
+            print("+---+---+---+")
