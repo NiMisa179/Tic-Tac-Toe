@@ -54,3 +54,28 @@ while ans.upper() == "Y":
                 print("| " + tic[i][j].upper(), end=" ")
             print("|")
             print("+---+---+---+")
+
+        win1 = False
+        if (tic[0][col1 - 1] == tic[1][col1 - 1] == tic[2][col1 - 1] == "x") or (
+                tic[row1 - 1][0] == tic[row1 - 1][1] == tic[row1 - 1][2] == "x") or (
+                tic[0][0] == tic[1][1] == tic[2][2] == "x") or (tic[0][2] == tic[1][1] == tic[2][0] == "x"):
+            win1 = True
+
+        win2 = False
+        if (tic[0][col2 - 1] == tic[1][col2 - 1] == tic[2][col2 - 1] == "o") or (
+                tic[row2 - 1][0] == tic[row2 - 1][1] == tic[row2 - 1][2] == "o") or (
+                tic[0][0] == tic[1][1] == tic[2][2] == "o") or (tic[0][2] == tic[1][1] == tic[2][0] == "o"):
+            win2 = True
+
+        if win1 or win2:
+            cont = False
+        if win1:
+            print("Player 1 wins")
+
+        if win2:
+            print("Player 2 wins")
+
+ans = input("C O N T I N U E ?: Y/N: ")
+
+
+
