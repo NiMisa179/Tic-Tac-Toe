@@ -87,7 +87,10 @@ while cont:
         cont = False
         break
 
-
+# this checks the state where none of the players win
+    if not win1 and not win2:
+        print("its a tie!")
+        break
 
 
 
