@@ -199,4 +199,4 @@ Some future improvements I keep in mind are:
   
 # 8. Author
 Nikos Misailidis 
-GitHub: https://github.com/NiMisa179
+Github: https://github.com/nmisailidis
